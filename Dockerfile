@@ -1,2 +1,4 @@
 FROM alpine:latest
-CMD ["echo","Hello, Captain!"]
+COPY script.sh .
+RUN chmod +x ./script.sh
+CMD ["sh","./script.sh"]
